@@ -38,15 +38,8 @@ class App extends Component {
         if(this.state.result.includes('--')){
             checkResult = this.state.result.replace('--','+')
         }
-
-        else {
-            checkResult = this.state.result
-        }
-        this.setState({
-                result: (eval(checkResult) || "" )
-                
-            });
-    };
+    }
+        
 
     
 
