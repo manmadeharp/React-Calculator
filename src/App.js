@@ -12,7 +12,7 @@ class App extends Component {
         }
     }
 
-    onClick = button => {
+    onClick = (button) => {
 
         if(button === "="){
             this.calculate()
@@ -42,17 +42,10 @@ class App extends Component {
         else {
             checkResult = this.state.result
         }
-
-        try {
-            this.setState({
-                result: (eval(checkResult) || "" ) + ""
-            })
-        } catch (e) {
-            this.setState({
-                result: "error"
-            })
-
-        }
+        this.setState({
+                result: (eval(checkResult) || "" )
+                
+            });
     };
 
     
